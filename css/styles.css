@@ -13,7 +13,7 @@
 :root {
     --white: #fff;
     --black: #222;
-    --green: #6cb302;
+    --green: #ff5c8a;
     --grey1: #f0f0f0;
     --grey2: #e9d7d3;
 }
@@ -250,9 +250,9 @@ li {
 }
 
 .hero .right img.img2 {
-    width: 90%;
+    width: 79%;
     right: -40%;
-    bottom: -40%;
+    bottom: -50%;
 }
 
 .glide__slide--active .center .right img {
@@ -990,5 +990,292 @@ li {
         top: 1rem;
         right: 1rem;
         padding: 0.5rem;
+    }
+}
+
+/* cart */
+.cart {
+    margin: 10rem auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+th {
+    text-align: left;
+    padding: 0.5rem;
+    color: var(--white);
+    background: var(--green);
+    font-weight: normal;
+}
+td {
+    padding: 1rem 0.5rem;
+}
+
+td input {
+    width: 5rem;
+    height: 3rem;
+    padding: 0.5rem;
+}
+td a {
+    color: orangered;
+    font-size: 1.4rem;
+}
+td img {
+    width: 8rem;
+    height: 8rem;
+    margin-right: 1rem;
+}
+
+.total-price {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+.total-price table {
+    border-top: 3px solid var(--green);
+    width: 100%;
+    max-width: 35rem;
+}
+td:last-child {
+    text-align: right;
+}
+.checkout-btn {
+    display: inline-block;
+    background-color: var(--green);
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 567px) {
+    .cart-info p {
+        display: none;
+    }
+}
+
+/* login form*/
+.login-form {
+    padding: 5rem 0;
+    max-width: 50rem;
+    margin: 5rem auto;
+}
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form form h1 {
+    margin-bottom: 1rem;
+}
+
+.login-form form p {
+    margin-bottom: 2rem;
+}
+
+.login-form form label {
+    margin-bottom: 1rem;
+}
+
+.login-form form input {
+    border: 1px solid var(--grey1);
+    outline: none;
+    padding: 1.5rem 0;
+    text-indent: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+}
+
+.login-form form input::placeholder {
+    font-size: 1.6rem;
+    color: grey;
+}
+
+.login-form form .buttons {
+    margin-top: 1rem;
+}
+.login-form form button {
+    outline: none;
+    border: none;
+    font-size: 1.6rem;
+    padding: 1rem 3rem;
+    margin-right: 1.5rem;
+    background: var(--green);
+    color: var(--white);
+    cursor: pointer;
+}
+.login-form form p a {
+    color: dodgerblue;
+}
+
+/* all products */
+.section .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.all-products select {
+    font-family: "Poppins", sans-serif;
+    width: 20rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    appearance: none;
+    outline: none;
+}
+.all-products form {
+    position: relative;
+    z-index: 1;
+}
+
+.all-products form span {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    z-index: 0;
+}
+
+@media (max-width: 768px) {
+    .all-products select {
+        width: 10rem;
+    }
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0 5rem 0;
+}
+
+.pagination span {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--green);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.pagination span:hover {
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: var(--white);
+}
+
+/* product details */
+.product-detail .details {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 7rem;
+}
+.product-detail .left {
+    display: flex;
+    flex-direction: column;
+}
+.product-detail .left .main {
+    text-align: center;
+    background: var(--grey1);
+    margin-bottom: 2rem;
+    height: 45rem;
+}
+.product-detail .left .main img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.product-detail .right span {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.product-detail .right h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+.product-detail .right .price {
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--green);
+    margin-bottom: 2rem;
+}
+.product-detail .right div {
+    display: inline-block;
+    position: relative;
+}
+.product-detail .right select {
+    font-family: "Poppins", sans-serif;
+    width: 20rem;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    appearance: none;
+    outline: none;
+}
+
+.product-detail form {
+    margin-bottom: 2rem;
+    z-index: 0;
+}
+
+.product-detail .right form span {
+    position: absolute;
+    top: 20%;
+    right: 1rem;
+    transform: translateX(-50%);
+    font-size: 2rem;
+}
+.product-detail .form {
+    margin-bottom: 3rem;
+}
+
+.product-detail .form input {
+    padding: 0.8rem;
+    text-align: center;
+    width: 3.5rem;
+    margin-right: 2rem;
+}
+.product-detail .form .addCart {
+    background: var(--green);
+    padding: 0.8rem 4rem;
+    color: var(--white);
+    border-radius: 3rem;
+}
+
+.product-detail h3 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 996px) {
+    .product-detail .left {
+        width: 30rem;
+        height: 45rem;
+    }
+    .product-detail .details {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .product-detail .left {
+        width: 100%;
+        height: 45rem;
+    }
+    .product-detail .right {
+        margin-top: 1rem;
+    }
+    .product-detail .details {
+        grid-template-columns: 1fr;
     }
 }
